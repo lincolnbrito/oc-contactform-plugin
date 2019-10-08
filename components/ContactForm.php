@@ -26,7 +26,7 @@ class ContactForm extends ComponentBase
 
         $receiver = 'admin@admin.tld';
 
-        Mail::send('lincolnbrito.contactform::contact', $data, function($message) use($receiver, $data) {
+        Mail::send('lincolnbrito.contactform::mail.contact', $data, function($message) use($receiver, $data) {
             $message->to($receiver);
             $message->replyTo($data['email']);
         });
