@@ -1,0 +1,24 @@
+{
+    "name": "lincolnbrito/oc-contactform-plugin",
+    "type": "october-plugin",
+    "description": "A simple contact form plugin",
+    "keywords": ["october", "cms", "contact", "form", "mail", "plugin"],
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Lincoln Brito",
+            "email": "lincoln.sbrito@gmail.com",
+            "role": "Developer"
+        }        
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LincolnBrito\\ContactForm\\": ""
+        }
+    }   
+}
