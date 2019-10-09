@@ -62,13 +62,12 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
-            'lincolnbrito.contactform.some_permission' => [
-                'tab' => 'ContactForm',
-                'label' => 'Some permission'
-            ],
+            'lincolnbrito.contactform.widgets.statistics' => [
+                'label' => 'Manage widgets',
+                'tab' => 'Contact Form',
+                'order' => 200,
+            ],    
         ];
     }
 
@@ -96,6 +95,16 @@ class Plugin extends PluginBase
     {
         return [
             'lincolnbrito.contactform::mail.contact',            
+        ];
+    }
+
+    public function registerReportWidgets()
+    {
+        return [
+            'LincolnBrito\ContactForm\ReportWidgets\Statistics' => [
+                'label'   => 'Contact Form statistics',
+                'context' => 'dashboard',                
+            ]
         ];
     }
 }
